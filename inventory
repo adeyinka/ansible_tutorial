@@ -1,0 +1,12 @@
+[Windows Servers]
+sccmdc.oraculum.com
+vcsa.oraculum.com
+[Kubernetes Clusters]
+192.168.1.35 prometheus
+192.168.1.15 k8s-master
+192.168.1.16 k8s-worker1
+192.168.1.17 k8s-worker2
+[Docker Clusters]
+192.168.1.20 node1
+192.168.1.21 node2
+
