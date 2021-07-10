@@ -2,8 +2,8 @@
 - hosts: winservers
   gather_facts: yes
   vars:
-  username: "ansible"
-  password: "ansible"
+    username: "ansible"
+    password: "ansible"
   tasks:
     - name: "Add user {{ username }}"
       win_user:
