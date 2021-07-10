@@ -1,0 +1,14 @@
+---
+- name: Add a user account
+- hosts: winservers
+  gather_facts: yes
+  vars:
+  username: "ansible"
+  password: "ansible"
+  tasks:
+    - name: Add user {{ username}}
+    win_user:
+    name: {{username}}
+    password: {{password}}
+    state: present
+  
