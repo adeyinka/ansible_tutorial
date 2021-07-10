@@ -7,8 +7,8 @@
   password: "ansible"
   tasks:
     - name: Add user {{ username}}
-    win_user:
-    name: {{username}}
-    password: {{password}}
-    state: present
+      win_user:
+       name: {{username}}
+       password: {{password}}
+       state: present
   
