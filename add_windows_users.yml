@@ -3,7 +3,7 @@
   gather_facts: yes
   vars:
     username: "ansible"
-    password: "ansible"
+    password: "changeme123"
   tasks:
     - name: "Add user {{ username }}"
       win_user:
