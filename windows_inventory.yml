@@ -1,0 +1,28 @@
+---
+#### YAML inventory file
+
+# the two first lines above are needed for the script
+# to identify the file as an inventory file
+
+## Structure
+# hosts:
+#   - host: <HOSTNAME>
+#     # if needed
+#     hostvars:
+#      key: value
+#     # if needed
+#     groups:
+#       - group1
+#       - group2
+
+##########################
+###  Hosts definition  ###
+##########################
+[windows]
+192.168.1.44
+192.168.1.24
+[windows:vars]
+ansible_user=administrator
+ansible_password=Apple@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
