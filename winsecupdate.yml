@@ -1,0 +1,22 @@
+---
+- hosts: winservers
+  gather_facts: yes
+  tasks:
+    - name: ping windows hosts
+      win_ping:
+
+    - name: Install all security, critical, and rollup updates
+      win_updates:
+         category_names: 
+         - SecurityUpdates
+         - CriticalUpdates
+         - UpdateRollups
+         state: installed
+         log_path: C:\ParkingSoft\ansible_win_updates.log
+      register: update_result
+           
+    - name: reboot server if required
+      win_reboot:
+      when: update_result.reboot_required
+
+

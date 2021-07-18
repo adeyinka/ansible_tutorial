@@ -1,0 +1,14 @@
+[winservers]
+192.168.1.10
+192.168.1.44
+192.168.1.24
+192.168.1.79
+[winservers:vars]
+ansible_user=administrator
+ansible_password=Apple@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+# group_vars/windows For managed windows hosts
+# ansible_connection: winrm
+# ansible_port: 5986

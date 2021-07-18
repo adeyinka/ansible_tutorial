@@ -1,0 +1,10 @@
+---
+- hosts: database_servers
+  become: yes
+  roles:
+    - apache
+
+- hosts: labservers
+  become: yes
+  roles:
+     - baseline

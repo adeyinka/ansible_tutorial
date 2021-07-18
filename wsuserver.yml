@@ -1,0 +1,9 @@
+---
+- hosts: winservers
+  gather_facts: yes
+  tasks:
+    - name: UseWSUServer
+      win_regedit:
+           path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindwsUpdate\AU
+           name: UseWUServer
+           dword: 0   
