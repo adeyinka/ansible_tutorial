@@ -1,0 +1,24 @@
+[linux]
+192.168.1.20 ansible_ssh_user=datanode1
+192.168.1.21 ansible_ssh_user=datanode2
+[database_servers]
+192.168.1.35 ansible_ssh_user=prometheus
+#192.168.1.55 ansible_ssh_user=oscapman
+[labservers]
+192.168.1.55
+192.168.1.56
+192.168.1.57
+[kubernetes]
+#k8s-master
+#k8s-worker1
+k8s-worker2
+prometheus
+[winservers]
+192.168.1.44
+192.168.1.99
+[winservers:vars]
+ansible_user=administrator
+ansible_password=Apple@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+

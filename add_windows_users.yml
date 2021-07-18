@@ -1,0 +1,13 @@
+---
+- hosts: winservers
+  gather_facts: yes
+  vars:
+    username: "ansible"
+    password: "changeme@123"
+  tasks:
+    - name: "Add user {{ username }}"
+      win_user:
+       name: "{{ username }}"
+       password: "{{ password }}"
+       state: present
+  
